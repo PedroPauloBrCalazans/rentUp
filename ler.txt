@@ -1,0 +1,23 @@
+cadastrar CARROS que tbm vai ter as IMAGENS que vai ter uma CATEGORIA, ESPECIFICAÇÃO, ESPECIFICAÇÕES DO CARRO, USUARIOS, AGENDAMENTO....
+
+
+ALUGUEL DE CARROS.
+
+REPOSITÓRIOS => Podemos entender que é uma camada(classe) que vai ser responsavel por fazer toda munipulação dos dados na nossa aplicação, Os repositórios serão responsavel por fazer o acesso ao BD, Cadastro... Fazer toda manipulação do BD.. 
+
+A route chama o repositórios e ele que vai ficar responsavel por fazer todo o esquema no BD.
+Quem conhece os Models são os repositórios.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+DTO -> Data Transfer Object, é um conceito de criar um objeto que será responsavel por fazer a transferência de dados entre um classe e outra.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+SOLID => 
+
+SRP - Single Responsability Principie (Princípio da Responsabilidade Única) 
+OCP - Open-Closed Principie (Princípio aberto/fechado)
+LSP - Liskov Substituion Principie (Princípio de Substituição de Liskov)
+ISP - Interface Segregation Principie (Princípio da Segregação de Interface)
+D - DIP - Dependency Inversion Principie (Princípio da Inversão de Dependência)
