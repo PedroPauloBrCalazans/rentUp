@@ -12,7 +12,7 @@ Quem conhece os Models são os repositórios.
 
 DTO -> Data Transfer Object, é um conceito de criar um objeto que será responsavel por fazer a transferência de dados entre um classe e outra.
 
-----------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 
 SOLID => 
 
@@ -21,3 +21,17 @@ OCP - Open-Closed Principie (Princípio aberto/fechado)
 LSP - Liskov Substituion Principie (Princípio de Substituição de Liskov)
 ISP - Interface Segregation Principie (Princípio da Segregação de Interface)
 D - DIP - Dependency Inversion Principie (Princípio da Inversão de Dependência)
+
+-------------------------------------------------------------------------------------------------------------------------
+
+TODA PARTE DAS ROTAS, COLOCAR DENTRO DA CONTROLLER, CONTROLLES SÃO CLASSES QUE RECEBEM A NOSSA REQUISIÇÃO E RETORNAR A RESPOSTA PARA QUEM ESTÁ CHAMANDO ELAS... DIFERENÇA DA ROTAS E CONTROLLES: AS ROTAS DE FATO SÓ SERVE PARA CHAMAR A CONTROLLER DEIXANDO O MINIMO DE CODIGO POSSIVEL, REQUISIÇÃO E RESPOSTA VAMOS DEIXAR PARA A CONTROLLER... 
+
+USE CASE (CASOS DE USOS) => SÃO OPERAÇÕES, PODEMOS ENTENDER COMO AS REGRAS DE NEGOCIOS DA APLICAÇÃO
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Não conseguimos lista pq estamos trabalhando com repositorios, instancias de repositorios diferentes, precisamos trabalhar em cima da mesma instancia. 
+
+Para isso temos um padrão de projeto, que é o padrão (Singleton).
+
+Singleton => tem como padrão criar apenas uma instancia de uma class que será uma instancia global para a aplicação. Não vamos ter a preocupação de criar mais de uma.
