@@ -1,9 +1,11 @@
-import { IEspecificacoesRepository } from "../repositories/IEspecificacoesRepository";
+import { IEspecificacoesRepository } from "../../repositories/IEspecificacoesRepository";
+
 interface IRequest {
     nome: string;
     descricao: string;
 }
-class CreateEspecificacaoService {
+
+class CreateEspecificacaoUseCase {
 
     constructor(private especificacoesRepository: IEspecificacoesRepository) {}
 
@@ -19,7 +21,6 @@ class CreateEspecificacaoService {
             descricao,
         });
     }
-
 }
 
-export { CreateEspecificacaoService }
+export { CreateEspecificacaoUseCase };
