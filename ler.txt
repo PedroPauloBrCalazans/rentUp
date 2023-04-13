@@ -56,3 +56,13 @@ STREAM -> Conceito de STREAM, diferente de uma leitura normal o STREAM permite c
 ---- > pipe, pega o que foi lido do STREAM e joga para alguma pasta que determinar (Função ou outro arquivo).
 ---- > lib para utilizar com arquivo CSV => CSV-PARSE
 
+-------------------------------------------------------------------------------------------------------------------------
+
+SWAGGER
+
+yarn add swagger-ui-express
+yarn add @types/swagger-ui-express -D
+
+dentro do server importar o swagger
+swagger.serve => chamando o servidor
+swaggerUi.setup() => é um arquivo JSON que vai está todas as informações da aplicação(documentação) 
