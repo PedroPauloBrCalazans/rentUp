@@ -47,3 +47,12 @@ lib => Multer - serve para fz a leitura de arquivos (Upload tanto unico quanto e
 
 single => fazer upload somente de 1 arquivo
 
+para fazer a leitura, existem algumas formas de fazer a leitura mais simple com (readFile faz a leitura tudo de uma vez do arquivo, consome mais memoria) do Node..
+
+STREAM -> Conceito de STREAM, diferente de uma leitura normal o STREAM permite com que a gente leia um determinado arquivo por partes(pedaços), servidor vai enviando pedaços aos poucos, consumo de dados seja menor. 
+
+---- > import fs from "fs"; nativo do NODE
+---- > createReadStream() essa função que permite a leitura em partes.
+---- > pipe, pega o que foi lido do STREAM e joga para alguma pasta que determinar (Função ou outro arquivo).
+---- > lib para utilizar com arquivo CSV => CSV-PARSE
+
