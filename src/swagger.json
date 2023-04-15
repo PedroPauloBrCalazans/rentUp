@@ -7,5 +7,71 @@
         "contact": {
             "email": "pedro@paulo.com.br"
         }
+    },
+    "paths": {
+        "/categorias": {
+            "post": {
+                "tags": ["Categoria"],
+                "summary": "Criar categoria",
+                "description": "Criação de uma nova categoria",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "descricao": {
+                                        "type": "string"
+                                    }
+                                },
+                                "example": {
+                                    "nome": "Categoria nome exemplo",
+                                    "descricao": "Categoria descrição exemplo"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "500": {
+                        "description": "Categoria já existente"
+                    }
+                }
+            },
+            "get": {
+                "tags": ["Categoria"],
+                "summary": "Listar todas as categorias",
+                "description": "Listar todas as categorias",
+                "responses": {
+                    "200": {
+                        "description": "Sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "nome":{
+                                                "type": "string"
+                                            },
+                                            "descricao": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
