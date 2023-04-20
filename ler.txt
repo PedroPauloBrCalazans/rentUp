@@ -66,3 +66,38 @@ yarn add @types/swagger-ui-express -D
 dentro do server importar o swagger
 swagger.serve => chamando o servidor
 swaggerUi.setup() => é um arquivo JSON que vai está todas as informações da aplicação(documentação) 
+
+-------------------------------------------------------------------------------------------------------------------------
+
+DOCKER
+
+O que DOCKER => Ferramenta para criação de containers
+
+* CONTAINER: Ambiente isolado dentro da máquina.
+* IMAGENS: Instruções para criação de um container (UBUNTU, postgres etc..).
+-- "roda" localmente "roda" em produção.
+-- Mesmo SO, compartilhando recursos da máquina (host = máquina local)
+
+o DOCKER vai pegar a imagem que estamos querendo criar, com essa imagem vai criar um container vai fazer a ponte, entre o SO e o container que estamos criando, por isso conseguimos utilizar os recursos da nossa máquina todo processamento que nossa máquina tem conseguimos utilizar tambem para nosso container.. Conseguimos utilizar as imagens oficiais dentro do DOCKER podendo tambem ser criada..
+
+--Roda a aplicação dentro do DOCKER, criar (dockerFile) => receita de bolo, vamos ter todos passo a passo que precisamos para rodar nossa aplicação.
+
+--FROM node -> qual a imagem quer baixar...
+
+--WORKDIR -> quando rodar a criação do container vai ser definido uma pasta onde queremos que as informações esteja contidas 
+
+--COPY package.json ./ -> estou copiando para dentro da pasta criada no WORKDIR.
+
+--RUN npm install -> baixando as dependência
+
+--COPY . . -> copiando tudo para a pasta raiz
+
+--EXPOSE 7474 -> porta que estamos utilizando..
+
+--CMD [ "npm","run","dev" ] -> rodar a aplicação
+
+docker build -t rentalx . -> executar o arquivo (dockerfile) vai gerar uma imagem da container
+
+docker ps => para ver os container que estão rodando
+
+docker run -p 7474:7474 rentalx => estamos trabalhando com uma máquina separada da nossa, está mapeando 
