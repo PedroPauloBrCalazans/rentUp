@@ -100,4 +100,32 @@ docker build -t rentalx . -> executar o arquivo (dockerfile) vai gerar uma image
 
 docker ps => para ver os container que estão rodando
 
-docker run -p 7474:7474 rentalx => estamos trabalhando com uma máquina separada da nossa, está mapeando 
+docker run -p 7474:7474 rentalx => estamos trabalhando com uma máquina separada da nossa, está mapeando..
+
+** DOCKER COMPOSE -> Serve como um orquestrador de container, permite definir quais são os serviços que precisa rodar, se algum serviço depende de algum outro pra ser criado. 
+
+-Toda vez que estiver trabalhando, basta que quem estiver executando o servidor que tiver executando tenha o docker junto com o docker-compose 
+
+docker-compose.yml -> um extensão que consegue passar algumas configurações para nosso arquivo.
+
+docker-compose up -> rodar no terminar assim que terminar as configurações.
+
+** COMANDOS DO DOCKER
+- docker ps -> sempre que quiser ver todos os nossos container que estão de pé, todos disponiveis que temos para rodar.
+- docker ps -a -> vai listar todos, rodando ou parados.
+- docker rm (PASSA O ID) -> Remover o container, aceita tanto o ID quanto o name do container para excluir.
+- docker start (ID OU NAME) -> para start, (iniciar) o container
+- docker stop (ID) -> para pausar o container.
+
+-   COMANDOS COM DOCKER-COMPOSE 
+- docker-compose up -d -> para subir o container, sobe em backgroud.
+- docker-compose stop -> parar o container
+- docker-compose down -> para remover o container junto com os serviços
+- docker-compose start -> para iniciar, pode ser usado quando se foi dado o docker-compose up
+- docker logs nome da aplicação(rentx) -> ver os logs
+- docker logs -f -> para sempre observar, para sair control D
+
+-------------------------------------------------------------------------------------------------------------------------
+
+BANCO DE DADOS
+
