@@ -129,3 +129,8 @@ docker-compose up -> rodar no terminar assim que terminar as configurações.
 
 BANCO DE DADOS
 
+1° ORM -> TYPEORM -> yarn add typeorm reflect-metadata
+
+2° POSTGRES -> yarn add pg (DRIVER)
+
+** vai precisar fz umas configurações no tsconfig (emitDecoratorMetadata, experimentalDecorators) = true
