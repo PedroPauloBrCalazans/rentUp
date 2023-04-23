@@ -119,6 +119,7 @@ docker-compose up -> rodar no terminar assim que terminar as configurações.
 
 -   COMANDOS COM DOCKER-COMPOSE 
 - docker-compose up -d -> para subir o container, sobe em backgroud.
+- docker-compose up --force-recreate -> para recriar
 - docker-compose stop -> parar o container
 - docker-compose down -> para remover o container junto com os serviços
 - docker-compose start -> para iniciar, pode ser usado quando se foi dado o docker-compose up

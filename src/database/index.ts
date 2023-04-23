@@ -1,9 +1,13 @@
 import { DataSource } from "typeorm";
 
-const dataSource = new DataSource({
+
+const appDataSource = new DataSource({
     type: "postgres",
-    host: "localhost",
-    username: "",
-    password: "",
-    database: "",
+    port: 5432,
+    host: "database_ignite",
+    username: "docker",
+    password: "ignite",
+    database: "rentx",
 });
+
+appDataSource.initialize();
