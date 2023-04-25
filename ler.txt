@@ -135,3 +135,12 @@ BANCO DE DADOS
 2° POSTGRES -> yarn add pg (DRIVER)
 
 ** vai precisar fz umas configurações no tsconfig (emitDecoratorMetadata, experimentalDecorators) = true
+
+** MIGRATIONS
+
+- MIGRATIONS -> versionamento de tudo que estamos fazendo no BD.
+- Criar novas tabelas remover uma coluna..... typeorm vai auxiliar nessas criação..
+
+esse script vai nos ajudar na criação das migration -> "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js -d src/database/data-source.ts"
+
+criação de uma migration ->  yarn typeorm migration:create -n CreateCategorias

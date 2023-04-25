@@ -4,10 +4,15 @@ import { DataSource } from "typeorm";
 const appDataSource = new DataSource({
     type: "postgres",
     port: 5432,
-    host: "database_ignite",
+    host: "localhost",
     username: "docker",
     password: "ignite",
     database: "rentx",
+    migrations: ["./src/database/migrations/*.ts"]
 });
 
-appDataSource.initialize();
+function createConnection(host = "database"): Promise<DataSource> {
+    return appDataSource.setOptions({ host }).initialize();
+  }
+
+// appDataSource.initialize();
